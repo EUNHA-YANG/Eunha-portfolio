@@ -142,7 +142,7 @@ let tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".con02",
     start: "top top",
-    end: "+=350%",
+    end: "+=400%",
     scrub: 1.5,
     pin: true,
     markers: false,
@@ -182,6 +182,7 @@ gsap.from(".con02 h2", {
   filter: "blur(10px)",
   duration: 1,
 });
+
 //con03
 
 let con03 = document.querySelector(".con03");
