@@ -478,11 +478,10 @@ body {
 .con03 .imgScrollLeft li,
 .con03 .imgScrollRight li {
   width: 70%;
-  height: 60%;
+  height: auto;
   margin-bottom: 30px;
   overflow: visible;
   background-color: #fff;
-  /* border-radius: 25px; */
 }
 
 .con03 .imgScrollLeft li:last-child,
@@ -493,7 +492,7 @@ body {
 .con03 .imgScrollLeft img,
 .con03 .imgScrollRight img {
   width: 100%;
-  height: 60%;
+  height: 300px;
   object-fit: cover;
   display: block;
   /* border-radius: 25px 25px 0px 0px; */
@@ -502,7 +501,14 @@ body {
   padding: 15px;
 }
 .con03 .txt .st {
-  margin-top: 70px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.con03 .txt .st li p {
+  margin: 0;
+  padding: 0;
 }
 
 /* 제목 */
@@ -514,7 +520,8 @@ body {
 .con03 .txt ul {
   width: 100%;
   display: flex;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 0;
   padding: 0;
   margin: 0;
 }
@@ -634,7 +641,7 @@ body {
 
 /* 태블릿 */
 @media (max-width: 1024px) {
-  #visual p {
+  #visual h2 {
     font-size: 4.5rem;
   }
 
@@ -739,40 +746,48 @@ body {
 
   /* con03 */
   .con03 {
-    padding-top: 140px;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 50px;
   }
 
-  .con03 .inner {
-    max-width: 900px;
-  }
-
-  .con03 h2 {
-    font-size: 3.5vw;
-    padding: 15px;
-    margin-bottom: 40px;
+  .con03 .centerBox h2 {
+    font-size: 8vw;
+    margin-bottom: 30px;
   }
 
   .con03 .centerBox h3 {
-    font-size: 2.5vw;
+    font-size: 4vw;
+  }
+
+  .con03 .imgScrollLeft,
+  .con03 .imgScrollRight {
+    width: 50%;
+    padding-top: 10px;
   }
 
   .con03 .imgScrollLeft li,
   .con03 .imgScrollRight li {
-    width: 75%;
-    margin-bottom: 50px;
+    width: 80%;
+    margin-bottom: 20px;
   }
 
-  .con03 .txt {
-    padding: 12px;
+  .con03 .imgScrollLeft img,
+  .con03 .imgScrollRight img {
+    height: 300px;
   }
 
   .con03 .txt h2 {
-    font-size: 1.5vw;
-    margin-bottom: 8px;
+    font-size: 2vw;
   }
 
   .con03 .txt p {
-    font-size: 1.3vw;
+    font-size: 1.8vw;
+  }
+
+  .con03 .txt .st {
+    margin-top: 50px;
   }
 
   /* con04 */
@@ -825,7 +840,7 @@ body {
 /* 반응형 */
 @media (max-width: 768px) {
   /* visual */
-  #visual p {
+  #visual h2 {
     font-size: 3rem;
   }
 
@@ -845,7 +860,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
-
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
@@ -855,12 +869,12 @@ body {
     flex: 0 0 auto;
     width: 100%;
     max-width: 350px;
-    margin: 0 auto;
+    margin: 50px auto;
   }
 
   .con01 .df {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
 
   .con01 .title {
@@ -876,7 +890,7 @@ body {
     padding: 20px 0px;
     word-break: keep-all;
     text-align: center;
-    line-height: 25px;
+    line-height: 20px;
   }
   .con01 .textBox {
     text-align: center;
@@ -895,7 +909,7 @@ body {
 
   /* con02 */
   .con02 {
-    height: auto;
+    height: 100vh;
     padding-top: 20px;
     padding-bottom: 50px;
     box-sizing: border-box;
@@ -921,11 +935,11 @@ body {
   }
 
   .con02 .inner .imgBox li .Box h4 {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
 
   .con02 .inner .imgBox li .Box p {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
 
   .con02 .inner .imgBox li .Box .more a {
@@ -939,9 +953,16 @@ body {
 
   .con03 .imgScrollLeft li,
   .con03 .imgScrollRight li {
-    width: 100%; /* full width */
-    height: 25%;
-    margin-bottom: 40px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .con03 .st p {
+    font-size: 0.7rem;
+  }
+  .con03 .imgScrollLeft img,
+  .con03 .imgScrollRight img {
+    height: 200px;
   }
   .con03 .fixedTxt {
     max-width: 90%;
@@ -983,6 +1004,38 @@ body {
   .con01 .skill li img {
     width: 50px;
     height: 50px;
+  }
+  .con03 {
+    padding-top: 60px;
+  }
+
+  .con03 .centerBox h2 {
+    font-size: 14vw;
+  }
+
+  .con03 .centerBox h3 {
+    font-size: 6vw;
+  }
+
+  .con03 .imgScrollLeft img,
+  .con03 .imgScrollRight img {
+    height: 200px;
+  }
+
+  .con03 .txt {
+    padding: 15px;
+  }
+
+  .con03 .txt h2 {
+    font-size: 6vw;
+  }
+
+  .con03 .txt p {
+    font-size: 4.5vw;
+  }
+
+  .con03 .txt .st {
+    margin-top: 20px;
   }
 
   .con04 li {

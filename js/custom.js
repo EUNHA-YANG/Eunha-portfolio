@@ -201,7 +201,7 @@ let t2 = gsap.timeline({
   scrollTrigger: {
     trigger: con03,
     start: "top top",
-    end: "+=400%",
+    end: "+=350%",
     scrub: 1,
     pin: true, // pin the entire section
     anticipatePin: 1,
