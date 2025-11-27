@@ -111,7 +111,7 @@ gsap.from(".con01 .df", {
   scrollTrigger: {
     trigger: ".con01 .textBox",
     start: "top 70%",
-    end: "top 30%",
+    end: "top 40%",
     scrub: 1,
   },
   opacity: 0,

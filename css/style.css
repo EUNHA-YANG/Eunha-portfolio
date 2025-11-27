@@ -19,6 +19,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+  font-family: "Gowun Batang", serif;
 }
 
 /* visual */
@@ -134,7 +135,7 @@ body {
   overflow: hidden;
 }
 .con01 .textBox {
-  width: calc(100% / 2);
+  width: 70%;
 }
 .con01 .wrap {
   /* background-color: yellow; */
@@ -207,20 +208,22 @@ body {
 /* right */
 
 .con01 .title {
-  width: 50%;
-
+  width: 40%;
   text-align: center;
-  font-size: 20px;
 }
 .con01 .title h4 {
   color: #644f44;
-  font-weight: normal;
+  font-weight: 700;
   word-break: keep-all;
+  font-size: 20px;
 }
 .con01 .txt {
   width: 100%;
   line-height: 30px;
   word-break: keep-all;
+}
+.con01 .txt p {
+  font-size: 18px;
 }
 .con01 .txt span {
   color: #636161;
@@ -280,7 +283,7 @@ body {
 .con02 {
   background: url(../img/web.png) no-repeat center;
   background-size: cover;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 200px;
   box-sizing: border-box;
   min-height: 100vh;
@@ -499,6 +502,7 @@ body {
 }
 .con03 .txt {
   padding: 15px;
+  font-size: 16px;
 }
 .con03 .txt .st {
   margin-top: 50px;
@@ -506,9 +510,13 @@ body {
   justify-content: space-between;
   width: 100%;
 }
+.con03 .txt li {
+  width: 100%;
+}
 .con03 .txt .st li p {
   margin: 0;
   padding: 0;
+  font-size: 13px;
 }
 
 /* 제목 */
@@ -651,6 +659,7 @@ body {
   }
 
   /* con01 */
+
   .con01 .wrap {
     max-width: 900px;
     padding-top: 80px;
@@ -753,12 +762,12 @@ body {
   }
 
   .con03 .centerBox h2 {
-    font-size: 8vw;
+    font-size: 7vw;
     margin-bottom: 30px;
   }
 
   .con03 .centerBox h3 {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 
   .con03 .imgScrollLeft,
@@ -779,7 +788,7 @@ body {
   }
 
   .con03 .txt h2 {
-    font-size: 2vw;
+    font-size: 1.9vw;
   }
 
   .con03 .txt p {
@@ -922,12 +931,12 @@ body {
 
   .con02 .inner .imgBox li img {
     width: 100%;
-    height: 50%;
+    height: 40%;
   }
 
   .con02 .inner .imgBox li .Box {
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
   }
 
   .con02 .inner .imgBox li .Box h2 {
@@ -989,6 +998,7 @@ body {
 
   .con05 .title p {
     font-size: 3.5vw;
+    word-break: keep-all;
   }
 }
 @media (max-width: 480px) {
@@ -1040,5 +1050,17 @@ body {
 
   .con04 li {
     width: 250px;
+  }
+  .con05 h2 {
+    font-size: 8vw;
+  }
+
+  .con05 .title h3 {
+    font-size: 4vw;
+  }
+
+  .con05 .title p {
+    font-size: 2.5vw;
+    word-break: keep-all;
   }
 }
