@@ -401,6 +401,7 @@ body {
   padding-top: 160px;
   background: url(../img/portfolio2.png) no-repeat center;
   background-size: cover;
+  word-break: keep-all;
 }
 
 .con03 .inner {
@@ -501,22 +502,12 @@ body {
   /* border-radius: 25px 25px 0px 0px; */
 }
 .con03 .txt {
-  padding: 15px;
-  font-size: 16px;
+  padding: 20px;
+  font-size: 15px;
 }
-.con03 .txt .st {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
+
 .con03 .txt li {
   width: 100%;
-}
-.con03 .txt .st li p {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
 }
 
 /* 제목 */
