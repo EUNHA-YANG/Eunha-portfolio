@@ -231,6 +231,88 @@ gsap.from(".con03 h2", {
 
 // con04
 
+const galleryItems = document.querySelectorAll(".con04 .wrap li");
+const modalBox = document.querySelector(".modalBox");
+const closeBtn = document.querySelector("#btn");
+const modalImages = document.querySelectorAll(".modaling li");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const currentCounter = document.querySelector(".current");
+const totalCounter = document.querySelector(".total");
+
+let currentIndex = 0;
+const totalImages = modalImages.length;
+
+// 총 이미지 수 표시
+totalCounter.textContent = totalImages;
+
+// 이미지 표시 함수
+function showImage(index) {
+  modalImages.forEach((img, i) => {
+    img.classList.remove("active");
+    if (i === index) {
+      img.classList.add("active");
+    }
+  });
+  currentCounter.textContent = index + 1;
+  currentIndex = index;
+}
+
+// 갤러리 아이템 클릭 시 모달 열기
+galleryItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    modalBox.classList.add("active");
+    document.body.style.overflow = "hidden";
+    showImage(index);
+  });
+});
+
+// 이전 버튼
+prevBtn.addEventListener("click", () => {
+  let newIndex = currentIndex - 1;
+  if (newIndex < 0) {
+    newIndex = totalImages - 1;
+  }
+  showImage(newIndex);
+});
+
+// 다음 버튼
+nextBtn.addEventListener("click", () => {
+  let newIndex = currentIndex + 1;
+  if (newIndex >= totalImages) {
+    newIndex = 0;
+  }
+  showImage(newIndex);
+});
+
+// 키보드 화살표로 이미지 넘기기
+document.addEventListener("keydown", (e) => {
+  if (!modalBox.classList.contains("active")) return;
+
+  if (e.key === "ArrowLeft") {
+    prevBtn.click();
+  } else if (e.key === "ArrowRight") {
+    nextBtn.click();
+  } else if (e.key === "Escape") {
+    modalBox.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+});
+
+// 닫기 버튼
+closeBtn.addEventListener("click", () => {
+  modalBox.classList.remove("active");
+  document.body.style.overflow = "auto";
+});
+
+// 모달 배경 클릭 시 닫기
+modalBox.addEventListener("click", (e) => {
+  if (e.target === modalBox) {
+    modalBox.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+});
+
 let list = gsap.utils.toArray(".con04 li");
 gsap.to(list, {
   xPercent: "-430", //x(가로)축으로 (-)왼쪽방향 list 가로크기만큼 400%만큼 이동
