@@ -262,10 +262,11 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: ".con05",
-      start: "0% 0%",
-      end: "90% 100%",
+      start: "top top",
+      end: "50% 50%",
       scrub: 2,
       markers: false,
+      once: true,
     },
   })
   .fromTo(

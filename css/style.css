@@ -290,6 +290,7 @@ body {
 }
 /* title */
 .con02 h2 {
+  width: 100%;
   text-align: center;
   padding: 50px;
   font-size: 5vw;
@@ -303,6 +304,7 @@ body {
   margin: 0px auto;
   position: relative;
   height: 100%;
+  word-break: keep-all;
 }
 
 /* imgBox */
