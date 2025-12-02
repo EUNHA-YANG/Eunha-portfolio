@@ -29,6 +29,18 @@ visualTimeline
     ease: "power3.out",
     stagger: 0.25,
   })
+
+  .from(
+    "#visual .st",
+    {
+      opacity: 0,
+      y: 30,
+      filter: "blur(10px)",
+      duration: 2,
+      ease: "power2.out",
+    },
+    "-=1.2"
+  )
   .from(
     "#visual .st1",
     {
@@ -53,41 +65,42 @@ visualTimeline
   );
 
 // con01
+const isMobile = window.innerWidth <= 480;
 
 // con01 title
 gsap.from(".con01 h2", {
   scrollTrigger: {
     trigger: ".con01",
-    start: "top 80%",
-    end: "top 50%",
-    scrub: 1,
+    start: isMobile ? "top 90%" : "top 80%",
+    end: isMobile ? "top 70%" : "top 50%",
+    scrub: isMobile ? 0.5 : 1,
     markers: false,
   },
   opacity: 0,
-  y: 50,
+  y: isMobile ? 30 : 50,
   filter: "blur(10px)",
   duration: 1,
 });
 
 gsap.from(".con01 .st1", {
   opacity: 0,
-  y: 50,
+  y: isMobile ? 30 : 50,
   duration: 1,
   scrollTrigger: {
     trigger: ".con01",
-    start: "top 80%",
+    start: isMobile ? "top 90%" : "top 80%",
     markers: false,
   },
 });
 
 gsap.from(".con01 .st2", {
   opacity: 0,
-  y: 50,
+  y: isMobile ? 30 : 50,
   duration: 1,
-  delay: 0.5, // 이제 적용됨
+  delay: 0.5,
   scrollTrigger: {
     trigger: ".con01",
-    start: "top 80%",
+    start: isMobile ? "top 90%" : "top 80%",
     markers: false,
   },
 });
@@ -96,13 +109,13 @@ gsap.from(".con01 .st2", {
 gsap.from(".con01 .imgBox", {
   scrollTrigger: {
     trigger: ".con01 .wrap",
-    start: "top 70%",
-    end: "top 40%",
-    scrub: 1,
+    start: isMobile ? "top 85%" : "top 70%",
+    end: isMobile ? "top 60%" : "top 40%",
+    scrub: isMobile ? 0.5 : 1,
   },
   opacity: 0,
-  x: -100,
-  rotation: -5,
+  x: isMobile ? -50 : -100,
+  rotation: isMobile ? 0 : -5,
   duration: 1.5,
 });
 
@@ -110,12 +123,12 @@ gsap.from(".con01 .imgBox", {
 gsap.from(".con01 .df", {
   scrollTrigger: {
     trigger: ".con01 .textBox",
-    start: "top 70%",
-    end: "top 40%",
-    scrub: 1,
+    start: isMobile ? "top 85%" : "top 70%",
+    end: isMobile ? "top 60%" : "top 40%",
+    scrub: isMobile ? 0.5 : 1,
   },
   opacity: 0,
-  x: 100,
+  x: isMobile ? 50 : 100,
   stagger: 0.2,
   duration: 1,
 });
@@ -124,17 +137,16 @@ gsap.from(".con01 .df", {
 gsap.from(".con01 .skill li", {
   scrollTrigger: {
     trigger: ".con01",
-    start: "20% center",
-    end: "40% center",
-    scrub: 2,
+    start: isMobile ? "30% center" : "20% center",
+    end: isMobile ? "50% center" : "40% center",
+    scrub: isMobile ? 1 : 2,
     markers: false,
   },
   opacity: 0,
-  y: 50,
+  y: isMobile ? 30 : 50,
   stagger: 0.3,
   duration: 1,
 });
-
 //con02
 let upBox = document.querySelectorAll(".upBox");
 
@@ -142,7 +154,7 @@ let tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".con02",
     start: "top top",
-    end: "+=400%",
+    end: "+=300%",
     scrub: 1.5,
     pin: true,
     markers: false,
@@ -152,11 +164,13 @@ let tl = gsap.timeline({
 upBox.forEach((box, index) => {
   tl.fromTo(
     box,
-    { x: "200%", opacity: 0 },
+    { x: "100%", opacity: 0 },
+
     {
       x: 0,
       opacity: 1,
-      duration: 1,
+      duration: 1.5,
+      ease: "power1.out",
       onStart: () => {
         // 이전 슬라이드들 숨기기
         upBox.forEach((prevBox, prevIndex) => {
@@ -168,7 +182,7 @@ upBox.forEach((box, index) => {
     }
   );
 });
-tl.to({}, { duration: 1 });
+tl.to({}, { duration: 2 });
 gsap.from(".con02 h2", {
   scrollTrigger: {
     trigger: ".con02",
