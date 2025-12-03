@@ -983,6 +983,9 @@ body {
 .con05 .title img {
   animation: floating 3s ease-in-out infinite;
 }
+.con05 .text span {
+  font-size: 5vw;
+}
 
 @keyframes floating {
   0%,
@@ -1233,7 +1236,7 @@ body {
 
   /* con05 */
   .con05 h2 {
-    font-size: 6vw;
+    font-size: 5vw;
     padding: 40px;
   }
 
@@ -1245,14 +1248,10 @@ body {
     max-width: 200px;
   }
 
-  .con05 .title h3 {
-    font-size: 3vw;
-    margin: 20px 0;
-  }
-
-  .con05 .title p {
-    font-size: 2.5vw;
+  .con05 .mask span {
+    font-size: 1.9vw;
     line-height: 1.6;
+    word-break: keep-all;
   }
 }
 
@@ -1495,6 +1494,16 @@ body {
     width: 90%;
     margin: 20px auto;
   }
+  .con05 {
+    padding-bottom: 60px;
+  }
+  .con05 h2 {
+    font-size: 6vw;
+    padding: 30px 10px;
+  }
+  .con05 .mask span {
+    font-size: 3vw;
+  }
 }
 
 /* 초소형 모바일 (480px 이하) */
@@ -1595,21 +1604,12 @@ body {
     width: 300px;
     padding: 0px 20px;
   }
+  .con04 {
+    padding-bottom: 100px;
+  }
   /* con05 */
   .con05 h2 {
     font-size: 8vw;
-  }
-
-  .con05 .title h3 {
-    font-size: 4vw;
-  }
-
-  .con05 .title p {
-    font-size: 3.5vw;
-    word-break: keep-all;
-  }
-  .con04 {
-    padding-bottom: 100px;
   }
 
   .con05 {
@@ -1618,6 +1618,9 @@ body {
 
   .con05 .title {
     padding: 20px;
+  }
+  .con05 .text span {
+    font-size: 6vw;
   }
 }
 
@@ -1893,29 +1896,10 @@ body {
   }
 
   .con05 h2 {
-    font-size: 9vw;
-    padding: 30px;
+    font-size: 6vw;
+    padding: 30px 10px;
   }
-
-  .con05 .title {
-    margin: 30px auto;
-    font-size: 1.2rem;
-  }
-
-  .con05 .title img {
-    max-width: 150px;
-  }
-
-  .con05 h2 {
-    font-size: 8vw;
-  }
-
-  .con05 .title h3 {
-    font-size: 4vw;
-  }
-
-  .con05 .title p {
-    font-size: 2.5vw;
-    word-break: keep-all;
+  .con05 .mask span {
+    font-size: 3vw;
   }
 }
