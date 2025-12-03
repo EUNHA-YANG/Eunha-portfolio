@@ -290,6 +290,7 @@ body {
 }
 
 /* con02 */
+
 .con02 {
   background: url(../img/web.png) no-repeat center;
   background-size: cover;
@@ -299,10 +300,11 @@ body {
   height: auto;
   min-height: 100vh;
 }
+
 /* title */
 .con02 h2 {
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   font-size: 5vw;
   font-weight: normal;
   font-family: "Bellefair", serif;
@@ -333,93 +335,126 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
+  opacity: 0;
 }
 
 .con02 .inner .imgBox li img {
-  width: 55%;
-
+  width: 50%;
+  height: auto;
   object-fit: cover;
 }
 
-/* Box  */
+/* Box */
 .con02 .Box {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  margin-top: 100px;
-}
-.con02 .inner .imgBox li .Box {
-  height: 100%;
-  object-fit: cover;
+  width: 45%;
+  text-align: left;
 }
 
 .con02 .inner .imgBox li .Box h3 {
-  font-size: 2vw;
-  margin-bottom: 10px;
+  font-size: 2.2vw;
+  margin-bottom: 50px;
   color: #644f44;
   font-family: "Bellefair", serif;
-}
-
-.con02 .inner .imgBox li .Box h4 {
-  font-size: 1.2vw;
-  color: #555;
   font-weight: 600;
+  text-align: center;
 }
 
-.con02 .inner .imgBox li .Box p {
+/* 설명 영역 */
+.con02 .description-area {
+  margin-bottom: 30px;
+}
+
+.con02 .description-area p {
   font-size: 1.1vw;
   line-height: 1.8;
   color: #666;
+  text-align: center;
+  word-break: keep-all;
+}
+.con02 .description-area span {
+  color: #b69a8b;
+  font-weight: 600;
+}
+
+/* 상세 정보 */
+.con02 .detail-info {
+  margin-bottom: 30px;
 }
 
 .con02 .info-item {
-  width: 100%;
-  margin: 0px auto;
+  margin-bottom: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
+
+.con02 .info-item h4 {
+  font-size: 1.2vw;
+  color: #644f44;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.con02 .info-item p {
+  font-size: 1vw;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 툴 아이콘 리스트 */
+.con02 .tool-list {
+  display: flex;
+  align-items: center;
+}
+
 .con02 .item {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
+  width: 60px;
+  height: 60px;
 }
-.con02 .tool {
+
+.con02 .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.con02 .item img:hover {
+  transform: scale(1.2);
+}
+
+/* 버튼 그룹 */
+.con02 .button-group {
   display: flex;
+  gap: 15px;
   justify-content: center;
-  align-items: center;
 }
 
-/* 버튼 */
-
-.con02 .inner .imgBox li .Box .more {
+.con02 .more {
   display: inline-block;
   padding: 12px 24px;
   background-color: transparent;
   color: #644f44;
-  border: 1px solid #644f44;
-  margin-top: 10px;
-  margin-right: 10px;
+  border: 1.5px solid #644f44;
+  border-radius: 5px;
   transition: all 0.3s ease;
-
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.con02 .inner .imgBox li .Box .more:hover {
+.con02 .more:hover {
   background-color: #644f44;
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.con02 .inner .imgBox li .Box .more a {
+.con02 .more a {
   text-decoration: none;
   font-size: 1vw;
-  font-weight: 500;
+  font-weight: 600;
+  color: inherit;
 }
-
 /* con03 */
 
 .con03 {
@@ -969,7 +1004,7 @@ body {
 
   .con01 {
     padding-top: 80px;
-    padding-bottom: 120px;
+    padding-bottom: 150px;
   }
 
   .con03 {
@@ -1039,99 +1074,140 @@ body {
   }
 
   /* con02 */
+
   .con02 {
-    padding-top: 150px;
+    padding-top: 80px;
     padding-bottom: 150px;
   }
 
   .con02 h2 {
-    font-size: 42px;
-    padding: 40px;
+    font-size: 6vw;
+    padding: 20px;
   }
 
   .con02 .inner {
     max-width: 900px;
+    padding: 30px;
   }
 
   .con02 .inner .imgBox li {
-    gap: 40px;
+    gap: 30px;
   }
 
   .con02 .inner .imgBox li img {
-    width: 50%;
+    width: 48%;
   }
 
-  .con02 .inner .imgBox li .Box {
-    width: 50%;
+  .con02 .Box {
+    width: 48%;
   }
 
-  .con02 .inner .imgBox li .Box h2 {
+  .con02 .inner .imgBox li .Box h3 {
     font-size: 3vw;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
-  .con02 .inner .imgBox li .Box h4 {
+  .con02 .description-area p {
     font-size: 1.5vw;
-    margin-top: 18px;
   }
 
-  .con02 .inner .imgBox li .Box p {
-    font-size: 1.3vw;
+  .con02 .info-item {
+    gap: 30px;
   }
 
-  .con02 .inner .imgBox li .Box .more {
+  .con02 .info-item h4 {
+    font-size: 1.6vw;
+    min-width: 80px;
+  }
+
+  .con02 .info-item p {
+    font-size: 1.4vw;
+  }
+
+  .con02 .item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .con02 .more {
     padding: 10px 20px;
-    margin-top: 15px;
   }
 
-  .con02 .inner .imgBox li .Box .more a {
-    font-size: 1.2vw;
+  .con02 .more a {
+    font-size: 1.4vw;
   }
 
   /* con03 */
   .con03 {
-    height: auto;
     min-height: 100vh;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 120px;
+    padding-bottom: 80px;
   }
 
   .con03 .centerBox h2 {
-    font-size: 7vw;
-    margin-bottom: 30px;
+    font-size: 6vw;
+    padding: 15px;
+    margin-bottom: 40px;
   }
 
   .con03 .centerBox h3 {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 
   .con03 .imgScrollLeft,
   .con03 .imgScrollRight {
-    width: 50%;
-    padding-top: 10px;
+    width: 48%;
+  }
+
+  .con03 .imgScrollLeft {
+    left: -30px;
+  }
+
+  .con03 .imgScrollRight {
+    right: -30px;
   }
 
   .con03 .imgScrollLeft li,
   .con03 .imgScrollRight li {
-    width: 70%;
-    margin-bottom: 20px;
+    width: 75%;
+    margin-bottom: 25px;
   }
 
   .con03 .imgScrollLeft img,
   .con03 .imgScrollRight img {
-    height: 300px;
+    height: 500px !important;
+  }
+  .con03 .imgScrollLeft li::before,
+  .con03 .imgScrollRight li::before {
+    height: 500px !important;
   }
 
-  .con03 .txt h2 {
-    font-size: 1.9vw;
+  /* 호버 정보 */
+  .con03 .hoverInfo {
+    position: absolute;
+    top: 50% !important;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    width: 80%;
+    text-align: center;
+    z-index: 10;
+  }
+  .con03 .hoverInfo h3 {
+    font-size: 1.5rem;
   }
 
-  .con03 .txt p {
-    font-size: 1.8vw;
+  .con03 .hoverInfo p {
+    font-size: 0.9rem;
   }
 
-  .con03 .txt .st {
-    margin-top: 50px;
+  .con03 .hoverInfo .tools span {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+  }
+
+  .con03 .hoverInfo .viewBtn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
   }
 
   /* con04 */
@@ -1291,43 +1367,14 @@ body {
 
   /* con02 */
   .con02 {
-    height: 100vh;
-    min-height: 100vh;
-    padding-top: 80px;
-    padding-bottom: 120px;
-
-    box-sizing: border-box;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    height: auto;
   }
 
-  .con02 .inner .imgBox li {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .con02 .inner .imgBox li img {
-    width: 100%;
-    height: 40%;
-  }
-
-  .con02 .inner .imgBox li .Box {
-    width: 100%;
-    /* padding: 20px; */
-  }
-
-  .con02 .inner .imgBox li .Box h2 {
-    font-size: 6vw;
-  }
-
-  .con02 .inner .imgBox li .Box h4 {
-    font-size: 3.5vw;
-  }
-
-  .con02 .inner .imgBox li .Box p {
-    font-size: 3vw;
-  }
-
-  .con02 .inner .imgBox li .Box .more a {
-    font-size: 3.5vw;
+  .con02 h2 {
+    font-size: 8vw;
+    padding: 20px 10px;
   }
 
   .con02 .inner {
@@ -1335,7 +1382,76 @@ body {
   }
 
   .con02 .inner .imgBox li {
-    position: relative !important;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .con02 .inner .imgBox li img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .con02 .Box {
+    width: 100%;
+  }
+
+  .con02 .inner .imgBox li .Box h3 {
+    font-size: 6vw;
+    margin-bottom: 20px;
+  }
+
+  .con02 .description-area {
+    margin-bottom: 25px;
+  }
+
+  .con02 .description-area p {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  .con02 .detail-info {
+    margin-bottom: 25px;
+  }
+
+  .con02 .info-item {
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .con02 .info-item h4 {
+    font-size: 4vw;
+    margin-bottom: 5px;
+  }
+
+  .con02 .info-item p {
+    font-size: 3.2vw;
+  }
+
+  .con02 .tool-list {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .con02 .item {
+    width: 45px;
+    height: 45px;
+  }
+
+  .con02 .button-group {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .con02 .more {
+    padding: 10px 20px;
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .con02 .more a {
+    font-size: 3.5vw;
   }
 
   /* con03 */
@@ -1380,6 +1496,96 @@ body {
     width: 90%;
     margin: 20px auto;
   }
+}
+
+/* 초소형 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .con03 {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .con03 .inner {
+    padding: 0 15px;
+  }
+
+  .con03 .centerBox {
+    margin-bottom: 30px;
+  }
+
+  .con03 .centerBox h2 {
+    font-size: 10vw;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .con03 .centerBox h3 {
+    font-size: 4.5vw;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .con03 .imgScrollLeft li,
+  .con03 .imgScrollRight li {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .con03 .imgScrollLeft img,
+  .con03 .imgScrollRight img {
+    height: 200px;
+  }
+
+  .con03 .txt {
+    padding: 12px;
+  }
+
+  .con03 .txt h2 {
+    font-size: 5vw;
+    margin-bottom: 6px;
+  }
+
+  .con03 .txt p {
+    font-size: 4vw;
+    line-height: 1.4;
+  }
+
+  .con03 .hoverInfo h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .con03 .hoverInfo p {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  .con03 .hoverInfo .tools {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .con03 .hoverInfo .tools span {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .con03 .hoverInfo .viewBtn {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+
+  .con03 .imgScrollLeft li::before,
+  .con03 .imgScrollRight li::before {
+    height: 200px;
+  }
+
+  .con03 .hoverInfo {
+    top: 100px;
+    width: 85%;
+  }
 
   /* con04 */
   .con04 h2 {
@@ -1418,6 +1624,7 @@ body {
 
 /* 초소형 */
 @media (max-width: 480px) {
+  /* visual */
   #visual h2 {
     font-size: 10vw;
   }
@@ -1429,6 +1636,7 @@ body {
     top: 50%;
   }
 
+  /* con01 */
   .con01 {
     padding-top: 60px;
     padding-bottom: 80px;
@@ -1507,32 +1715,167 @@ body {
     width: 50px;
     height: 50px;
   }
+  /* con02 */
   .con02 {
-    height: auto;
-    padding-top: 60px;
-    padding-bottom: 100px;
-    box-sizing: border-box;
-  }
-
-  .con02 h2 {
-    padding: 20px;
-  }
-
-  .con03 {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 80px;
   }
 
-  .con03 .centerBox h2 {
-    padding: 10px;
+  .con02 h2 {
+    font-size: 10vw;
+    padding: 15px 10px;
+  }
+
+  .con02 .inner {
+    padding: 0 15px;
+  }
+
+  .con02 .inner .imgBox li {
+    gap: 25px;
+  }
+
+  .con02 .inner .imgBox li img {
+    border-radius: 8px;
+  }
+
+  .con02 .inner .imgBox li .Box h3 {
+    font-size: 7vw;
+    margin-bottom: 15px;
+  }
+
+  .con02 .description-area {
     margin-bottom: 20px;
+  }
+
+  .con02 .description-area p {
+    font-size: 4vw;
+    line-height: 1.5;
+  }
+
+  .con02 .detail-info {
+    margin-bottom: 20px;
+  }
+
+  .con02 .info-item {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .con02 .info-item h4 {
+    font-size: 4.5vw;
+  }
+
+  .con02 .info-item p {
+    font-size: 3.5vw;
+  }
+
+  .con02 .tool-list {
+    gap: 8px;
+  }
+
+  .con02 .item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .con02 .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .con02 .more {
+    padding: 10px 18px;
+    width: 100%;
+  }
+
+  .con02 .more a {
+    font-size: 4vw;
+  }
+  /* con03 */
+
+  .con03 {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .con03 .inner {
+    padding: 0 15px;
+  }
+
+  .con03 .centerBox {
+    margin-bottom: 30px;
+  }
+
+  .con03 .centerBox h2 {
+    font-size: 10vw;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .con03 .centerBox h3 {
+    font-size: 4.5vw;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  /* 모든 li 일렬로 */
+  .con03 .imgScrollLeft li,
+  .con03 .imgScrollRight li {
+    position: static !important;
+    width: 95% !important;
+    max-width: 100% !important;
+    margin: 0 auto 25px !important;
+    transform: none !important;
   }
 
   .con03 .imgScrollLeft img,
   .con03 .imgScrollRight img {
-    height: 180px;
+    height: 200px;
   }
 
+  /* 호버 오버레이 높이 */
+  .con03 .imgScrollLeft li::before,
+  .con03 .imgScrollRight li::before {
+    height: 200px;
+  }
+
+  /* 호버 정보 - 가운데 정렬 */
+  .con03 .hoverInfo {
+    position: absolute;
+    top: 50% !important;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    width: 85%;
+  }
+
+  .con03 .hoverInfo h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .con03 .hoverInfo p {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .con03 .hoverInfo .tools {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .con03 .hoverInfo .tools span {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .con03 .hoverInfo .viewBtn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  /* con04 */
   .con04 {
     padding-top: 60px;
     padding-bottom: 80px;

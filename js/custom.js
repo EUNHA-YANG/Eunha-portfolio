@@ -65,57 +65,29 @@ visualTimeline
   );
 
 // con01
-const isMobile = window.innerWidth <= 480;
-
-// con01 title
 gsap.from(".con01 h2", {
   scrollTrigger: {
     trigger: ".con01",
-    start: isMobile ? "top 90%" : "top 80%",
-    end: isMobile ? "top 70%" : "top 50%",
-    scrub: isMobile ? 0.5 : 1,
+    start: "top 80%",
+    toggleActions: "play none none reverse",
     markers: false,
   },
   opacity: 0,
-  y: isMobile ? 30 : 50,
-  filter: "blur(10px)",
-  duration: 1,
-});
+  y: 50,
 
-gsap.from(".con01 .st1", {
-  opacity: 0,
-  y: isMobile ? 30 : 50,
   duration: 1,
-  scrollTrigger: {
-    trigger: ".con01",
-    start: isMobile ? "top 90%" : "top 80%",
-    markers: false,
-  },
-});
-
-gsap.from(".con01 .st2", {
-  opacity: 0,
-  y: isMobile ? 30 : 50,
-  duration: 1,
-  delay: 0.5,
-  scrollTrigger: {
-    trigger: ".con01",
-    start: isMobile ? "top 90%" : "top 80%",
-    markers: false,
-  },
 });
 
 // con01 imgBox
 gsap.from(".con01 .imgBox", {
   scrollTrigger: {
     trigger: ".con01 .wrap",
-    start: isMobile ? "top 85%" : "top 70%",
-    end: isMobile ? "top 60%" : "top 40%",
-    scrub: isMobile ? 0.5 : 1,
+    start: "top 70%",
+    toggleActions: "play none none reverse",
   },
   opacity: 0,
-  x: isMobile ? -50 : -100,
-  rotation: isMobile ? 0 : -5,
+  x: -100,
+  rotation: -5,
   duration: 1.5,
 });
 
@@ -123,12 +95,12 @@ gsap.from(".con01 .imgBox", {
 gsap.from(".con01 .df", {
   scrollTrigger: {
     trigger: ".con01 .textBox",
-    start: isMobile ? "top 85%" : "top 70%",
-    end: isMobile ? "top 60%" : "top 40%",
-    scrub: isMobile ? 0.5 : 1,
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    markers: false,
   },
   opacity: 0,
-  x: isMobile ? 50 : 100,
+  x: 100,
   stagger: 0.2,
   duration: 1,
 });
@@ -137,17 +109,19 @@ gsap.from(".con01 .df", {
 gsap.from(".con01 .skill li", {
   scrollTrigger: {
     trigger: ".con01",
-    start: isMobile ? "30% center" : "20% center",
-    end: isMobile ? "50% center" : "40% center",
-    scrub: isMobile ? 1 : 2,
+    start: "20% center",
+    end: "40% center",
+    scrub: 2,
     markers: false,
   },
   opacity: 0,
-  y: isMobile ? 30 : 50,
+  y: 50,
   stagger: 0.3,
   duration: 1,
 });
+
 //con02
+
 let upBox = document.querySelectorAll(".upBox");
 
 let tl = gsap.timeline({
@@ -158,14 +132,17 @@ let tl = gsap.timeline({
     scrub: 1.5,
     pin: true,
     markers: false,
+    anticipatePin: 1,
   },
 });
 
 upBox.forEach((box, index) => {
   tl.fromTo(
     box,
-    { x: "100%", opacity: 0 },
-
+    {
+      x: "100%",
+      opacity: 0,
+    },
     {
       x: 0,
       opacity: 1,
@@ -175,25 +152,28 @@ upBox.forEach((box, index) => {
         // 이전 슬라이드들 숨기기
         upBox.forEach((prevBox, prevIndex) => {
           if (prevIndex < index) {
-            gsap.to(prevBox, { opacity: 0, duration: 0.3 });
+            gsap.to(prevBox, {
+              opacity: 0,
+              duration: 0.3,
+            });
           }
         });
       },
     }
   );
 });
+
 tl.to({}, { duration: 2 });
+
 gsap.from(".con02 h2", {
   scrollTrigger: {
     trigger: ".con02",
     start: "top 80%",
-    end: "top 50%",
-    scrub: 1,
+    toggleActions: "play none none reverse",
     markers: false,
   },
   opacity: 0,
   y: 50,
-  filter: "blur(10px)",
   duration: 1,
 });
 
