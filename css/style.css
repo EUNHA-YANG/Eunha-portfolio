@@ -21,7 +21,7 @@ body {
   width: 100%;
   position: relative;
   font-family: "Gowun Batang", serif;
-  cursor: url("../img/cursor.png"), pointer;
+  cursor: url("../img/cursor2.png"), pointer;
 }
 
 /* visual */
@@ -771,8 +771,7 @@ body {
   color: #fff;
   width: 100%;
   height: 100%;
-  background: url(../img/Chiikawa\ Hachiware\ Animated--cursor--SweezyCursors.png)
-    no-repeat center / 120px;
+  background: url(../img/Chiikawa\ Momonga.png) no-repeat center / 120px;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -785,7 +784,7 @@ body {
 }
 
 .con04 li:hover::after {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 /* 모달창 */
@@ -1786,6 +1785,7 @@ body {
   .con02 .more {
     padding: 10px 18px;
     width: 100%;
+    text-align: center;
   }
 
   .con02 .more a {
@@ -1821,13 +1821,9 @@ body {
   /* 모든 li 일렬로 */
   .con03 .imgScrollLeft li,
   .con03 .imgScrollRight li {
-    position: static !important;
-    width: 95% !important;
-    max-width: 100% !important;
-    margin: 0 auto 25px !important;
-    transform: none !important;
+    position: relative !important; /* 다시 relative로 돌려야 overflow 정상 작동함 */
+    overflow: hidden !important; /* 튀어나오는 영역 잘림 */
   }
-
   .con03 .imgScrollLeft img,
   .con03 .imgScrollRight img {
     height: 200px;
@@ -1881,9 +1877,16 @@ body {
     padding-bottom: 80px;
   }
 
-  .con04 h2 {
+  .con04 .textBox h2 {
     font-size: 9vw;
   }
+  .con04 .textBox p {
+    font-size: 4vw;
+  }
+  .con04 li {
+    width: 250px;
+  }
+  /* con05 */
 
   .con05 {
     padding-bottom: 60px;
@@ -1902,55 +1905,7 @@ body {
   .con05 .title img {
     max-width: 150px;
   }
-  #visual p {
-    font-size: 2rem;
-  }
 
-  .con01 h2,
-  .con02 h2 {
-    font-size: 28px;
-  }
-
-  .con01 .skill li img {
-    width: 50px;
-    height: 50px;
-  }
-  .con03 {
-    padding-top: 60px;
-  }
-
-  .con03 .centerBox h2 {
-    font-size: 14vw;
-  }
-
-  .con03 .centerBox h3 {
-    font-size: 6vw;
-  }
-
-  .con03 .imgScrollLeft img,
-  .con03 .imgScrollRight img {
-    height: 200px;
-  }
-
-  .con03 .txt {
-    padding: 15px;
-  }
-
-  .con03 .txt h2 {
-    font-size: 6vw;
-  }
-
-  .con03 .txt p {
-    font-size: 4.5vw;
-  }
-
-  .con03 .txt .st {
-    margin-top: 20px;
-  }
-
-  .con04 li {
-    width: 250px;
-  }
   .con05 h2 {
     font-size: 8vw;
   }
