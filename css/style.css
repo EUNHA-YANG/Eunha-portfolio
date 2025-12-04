@@ -643,7 +643,7 @@ body {
 /* 호버 시 나타나는 정보 박스 */
 .con03 .hoverInfo {
   position: absolute;
-  top: 225px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
