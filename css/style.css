@@ -953,7 +953,9 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   height: auto;
+  padding-top: 50px;
   padding-bottom: 100px;
+  box-sizing: border-box;
 }
 .con05 .title {
   width: 100%;
@@ -983,8 +985,9 @@ body {
 .con05 .title img {
   animation: floating 3s ease-in-out infinite;
 }
-.con05 .text span {
-  font-size: 5vw;
+.con05 .mask span {
+  font-size: 1.2vw;
+  line-height: 45px;
 }
 
 @keyframes floating {
@@ -1365,7 +1368,7 @@ body {
 
   /* con02 */
   .con02 {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
     height: auto;
   }
@@ -1424,12 +1427,12 @@ body {
   }
 
   .con02 .info-item h4 {
-    font-size: 2.5vw;
+    font-size: 3.2vw;
     margin-bottom: 5px;
   }
 
   .con02 .info-item p {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   .con02 .tool-list {
@@ -1438,8 +1441,8 @@ body {
   }
 
   .con02 .item {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
   }
 
   .con02 .button-group {
@@ -1451,6 +1454,7 @@ body {
     padding: 10px 20px;
     flex: 1;
     min-width: 120px;
+    text-align: center;
   }
 
   .con02 .more a {
@@ -1499,137 +1503,28 @@ body {
     width: 90%;
     margin: 20px auto;
   }
-  .con05 {
-    padding-bottom: 60px;
-  }
-  .con05 h2 {
-    font-size: 6vw;
-    padding: 30px 10px;
-  }
-  .con05 .mask span {
-    font-size: 3vw;
-  }
-}
-
-/* 초소형 모바일 (480px 이하) */
-@media (max-width: 480px) {
-  .con03 {
-    padding-top: 60px;
-    padding-bottom: 50px;
-  }
-
-  .con03 .inner {
-    padding: 0 15px;
-  }
-
-  .con03 .centerBox {
-    margin-bottom: 30px;
-  }
-
-  .con03 .centerBox h2 {
-    font-size: 10vw;
-    padding: 8px;
-    margin-bottom: 10px;
-  }
-
-  .con03 .centerBox h3 {
-    font-size: 4.5vw;
-    line-height: 1.4;
-    padding: 0 10px;
-  }
-
-  .con03 .imgScrollLeft li,
-  .con03 .imgScrollRight li {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 25px;
-  }
-
-  .con03 .imgScrollLeft img,
-  .con03 .imgScrollRight img {
-    height: 200px;
-  }
-
-  .con03 .txt {
-    padding: 12px;
-  }
-
-  .con03 .txt h2 {
-    font-size: 5vw;
-    margin-bottom: 6px;
-  }
-
-  .con03 .txt p {
-    font-size: 4vw;
-    line-height: 1.4;
-  }
-
-  .con03 .hoverInfo h3 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
-
-  .con03 .hoverInfo p {
-    font-size: 0.75rem;
-    margin-bottom: 6px;
-    line-height: 1.4;
-  }
-
-  .con03 .hoverInfo .tools {
-    gap: 6px;
-    margin-bottom: 12px;
-  }
-
-  .con03 .hoverInfo .tools span {
-    font-size: 0.65rem;
-    padding: 3px 8px;
-  }
-
-  .con03 .hoverInfo .viewBtn {
-    padding: 8px 16px;
-    font-size: 0.75rem;
-  }
-
-  .con03 .imgScrollLeft li::before,
-  .con03 .imgScrollRight li::before {
-    height: 200px;
-  }
-
-  .con03 .hoverInfo {
-    top: 100px;
-    width: 85%;
-  }
-
-  /* con04 */
-  .con04 h2 {
-    font-size: 8vw;
-  }
-
-  .con04 li {
-    width: 300px;
-    padding: 0px 20px;
-  }
-  .con04 {
-    padding-bottom: 100px;
-  }
   /* con05 */
-  .con05 h2 {
-    font-size: 8vw;
-  }
-
   .con05 {
     padding-bottom: 80px;
+  }
+  .con05 h2 {
+    font-size: 10vw;
+    font-weight: normal;
+    padding: 30px 10px;
   }
 
   .con05 .title {
     padding: 20px;
   }
-  .con05 .text span {
-    font-size: 6vw;
+
+  .con05 .mask span {
+    font-size: 3.5vw;
+
+    word-break: keep-all;
   }
 }
 
-/* 초소형 */
+/* 초소형 모바일 (480px 이하) */
 @media (max-width: 480px) {
   /* visual */
   #visual h2 {
@@ -1722,12 +1617,12 @@ body {
     width: 50px;
     height: 50px;
   }
+
   /* con02 */
   .con02 {
     padding-top: 50px;
     padding-bottom: 80px;
   }
-
   .con02 h2 {
     font-size: 10vw;
     padding: 15px 10px;
@@ -1741,12 +1636,8 @@ body {
     gap: 25px;
   }
 
-  .con02 .inner .imgBox li img {
-    border-radius: 8px;
-  }
-
   .con02 .inner .imgBox li .Box h3 {
-    font-size: 7vw;
+    font-size: 5vw;
     margin-bottom: 15px;
   }
 
@@ -1781,12 +1672,12 @@ body {
   }
 
   .con02 .item {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
   }
 
   .con02 .button-group {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 10px;
   }
 
@@ -1799,8 +1690,8 @@ body {
   .con02 .more a {
     font-size: 4vw;
   }
-  /* con03 */
 
+  /* con03 */
   .con03 {
     padding-top: 60px;
     padding-bottom: 50px;
@@ -1826,41 +1717,40 @@ body {
     padding: 0 10px;
   }
 
-  /* 모든 li 일렬로 */
   .con03 .imgScrollLeft li,
   .con03 .imgScrollRight li {
-    position: relative !important; /* 다시 relative로 돌려야 overflow 정상 작동함 */
-    overflow: hidden !important; /* 튀어나오는 영역 잘림 */
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
   }
+
   .con03 .imgScrollLeft img,
   .con03 .imgScrollRight img {
     height: 200px;
   }
 
-  /* 호버 오버레이 높이 */
-  .con03 .imgScrollLeft li::before,
-  .con03 .imgScrollRight li::before {
-    height: 200px;
+  .con03 .txt {
+    padding: 12px;
   }
 
-  /* 호버 정보 - 가운데 정렬 */
-  .con03 .hoverInfo {
-    position: absolute;
-    top: 50% !important;
-    left: 50%;
-    transform: translate(-50%, -50%) !important;
-    width: 85%;
+  .con03 .txt h2 {
+    font-size: 5vw;
+    margin-bottom: 6px;
+  }
+
+  .con03 .txt p {
+    font-size: 4vw;
+    line-height: 1.4;
   }
 
   .con03 .hoverInfo h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 8px;
-    font-weight: 700;
   }
 
   .con03 .hoverInfo p {
-    font-size: 0.8rem;
-    margin-bottom: 8px;
+    font-size: 0.75rem;
+    margin-bottom: 6px;
     line-height: 1.4;
   }
 
@@ -1870,13 +1760,23 @@ body {
   }
 
   .con03 .hoverInfo .tools span {
-    font-size: 0.7rem;
-    padding: 4px 10px;
+    font-size: 0.65rem;
+    padding: 3px 8px;
   }
 
   .con03 .hoverInfo .viewBtn {
-    padding: 10px 20px;
-    font-size: 0.85rem;
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+
+  .con03 .imgScrollLeft li::before,
+  .con03 .imgScrollRight li::before {
+    height: 200px;
+  }
+
+  .con03 .hoverInfo {
+    top: 100px;
+    width: 85%;
   }
 
   /* con04 */
@@ -1884,7 +1784,6 @@ body {
     padding-top: 60px;
     padding-bottom: 80px;
   }
-
   .con04 .textBox h2 {
     font-size: 9vw;
   }
@@ -1894,17 +1793,30 @@ body {
   .con04 li {
     width: 250px;
   }
-  /* con05 */
 
+  .con04 li {
+    width: 300px;
+    padding: 0px 20px;
+  }
+  .con04 {
+    padding-bottom: 100px;
+  }
+
+  /* con05 */
   .con05 {
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .con05 h2 {
-    font-size: 6vw;
-    padding: 30px 10px;
+    font-size: 9vw;
+    font-weight: normal;
+    padding: 10px 10px;
+  }
+  .con05 img {
+    width: 40%;
   }
   .con05 .mask span {
-    font-size: 3vw;
+    font-size: 4.5vw;
   }
 }
