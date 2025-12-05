@@ -205,7 +205,7 @@ body {
 .con01 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .con01 .imgBox {
   width: 400px;
@@ -242,7 +242,6 @@ body {
 }
 .con01 .df {
   width: 100%;
-  /* background-color: violet; */
   margin-bottom: 10px;
   display: flex;
   gap: 50px;
@@ -340,7 +339,7 @@ body {
 }
 
 .con02 .inner .imgBox li img {
-  width: 50%;
+  width: 70%;
   height: auto;
   object-fit: cover;
 }
@@ -459,8 +458,8 @@ body {
 
 .con03 {
   width: 100%;
-  min-height: 100vh; /* 변경 */
-  height: auto; /* 추가 */
+  min-height: 100vh;
+  height: auto;
   height: calc(100vh - 160px);
   position: relative;
   overflow: hidden;
@@ -474,7 +473,7 @@ body {
 
 .con03 .inner {
   position: relative;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -546,18 +545,6 @@ body {
   padding-top: 20px;
 }
 
-/* Individual images */
-.con03 .imgScrollLeft li,
-.con03 .imgScrollRight li {
-  width: 70%;
-  height: auto;
-  margin-bottom: 30px;
-
-  overflow: hidden;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
 .con03 .imgScrollLeft li:last-child,
 .con03 .imgScrollRight li:last-child {
   margin-bottom: 0;
@@ -566,9 +553,10 @@ body {
 .con03 .imgScrollLeft img,
 .con03 .imgScrollRight img {
   width: 100%;
-  height: 450px;
+  height: auto;
   object-fit: cover;
   display: block;
+  /* object-position: center; */
 }
 .con03 .txt {
   padding: 20px;
@@ -605,7 +593,7 @@ body {
 .con03 .imgScrollRight li {
   width: 70%;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
   overflow: hidden;
   background-color: #fff;
   position: relative;
@@ -628,7 +616,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 450px;
+  height: 100%;
   background: rgba(0, 0, 0, 0);
   z-index: 2;
   transition: all 0.4s ease;
