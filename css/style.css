@@ -553,7 +553,7 @@ body {
 .con03 .imgScrollLeft img,
 .con03 .imgScrollRight img {
   width: 100%;
-  height: auto;
+  height: 450px;
   object-fit: cover;
   display: block;
   /* object-position: center; */
@@ -994,24 +994,8 @@ body {
     min-height: auto;
     height: auto;
   }
+  /* visual */
 
-  .con01 {
-    padding-top: 80px;
-    padding-bottom: 150px;
-  }
-
-  .con03 {
-    min-height: 100vh;
-    padding-bottom: 80px;
-  }
-
-  .con04 {
-    padding-bottom: 120px;
-  }
-
-  .con05 {
-    padding-bottom: 80px;
-  }
   #visual h2 {
     font-size: 4.5rem;
   }
@@ -1022,6 +1006,10 @@ body {
   }
 
   /* con01 */
+  .con01 {
+    padding-top: 80px;
+    padding-bottom: 150px;
+  }
 
   .con01 .wrap {
     max-width: 900px;
@@ -1088,11 +1076,11 @@ body {
   }
 
   .con02 .inner .imgBox li img {
-    width: 48%;
+    width: 60%;
   }
 
   .con02 .Box {
-    width: 48%;
+    width: 40%;
   }
 
   .con02 .inner .imgBox li .Box h3 {
@@ -1131,6 +1119,7 @@ body {
   }
 
   /* con03 */
+
   .con03 {
     min-height: 100vh;
     padding-top: 120px;
@@ -1204,8 +1193,10 @@ body {
   }
 
   /* con04 */
+
   .con04 {
     padding-top: 80px;
+    padding-bottom: 120px;
   }
 
   .con04 .textBox {
@@ -1226,6 +1217,9 @@ body {
   }
 
   /* con05 */
+  .con05 {
+    padding-bottom: 80px;
+  }
   .con05 h2 {
     font-size: 5vw;
     padding: 40px;
